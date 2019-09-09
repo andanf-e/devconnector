@@ -1,6 +1,9 @@
 {
   "name": "devconnector",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.1"
+  },
   "description": "educational project to investigate exp of m+e+r+n",
   "main": "server.js",
   "scripts": {
