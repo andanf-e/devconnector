@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ProfileGithub extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clientId: "f8d0ac6fe6cea9ccf04a",
-      clientSecret: "57e8f4605ec9726670d336af7743e81801a768c5",
+      clientId: 'f8d0ac6fe6cea9ccf04a',
+      clientSecret: '57e8f4605ec9726670d336af7743e81801a768c5',
       count: 5,
-      sort: "created: asc",
+      sort: 'created: asc',
       repos: []
     };
   }

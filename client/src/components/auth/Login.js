@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import TextFieldGroup from "../common/TextFieldGroup";
-import { loginUser } from "../../actions/authActions";
+import TextFieldGroup from '../common/TextFieldGroup';
+import { loginUser } from '../../actions/authActions';
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
       errors: {}
     };
 
@@ -20,7 +20,7 @@ class Login extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
+      this.props.history.push('/dashboard');
     }
 
     if (nextProps.errors) {
@@ -30,7 +30,7 @@ class Login extends Component {
 
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("dashboard");
+      this.props.history.push('dashboard');
     }
   }
 

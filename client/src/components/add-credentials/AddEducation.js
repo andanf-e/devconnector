@@ -1,23 +1,23 @@
-import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import { addEducation } from "../../actions/profileActions";
-import TextFieldGroup from "../common/TextFieldGroup";
-import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
+import { addEducation } from '../../actions/profileActions';
+import TextFieldGroup from '../common/TextFieldGroup';
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
 
 class AddEducation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      school: "",
-      degree: "",
-      fieldofstudy: "",
-      from: "",
-      to: "",
+      school: '',
+      degree: '',
+      fieldofstudy: '',
+      from: '',
+      to: '',
       current: false,
-      description: "",
+      description: '',
       errors: {},
       disabled: false
     };
@@ -113,7 +113,7 @@ class AddEducation extends Component {
                   value={this.state.to}
                   onChange={this.onChange}
                   error={errors.to}
-                  disabled={this.state.disabled ? "disabled" : ""}
+                  disabled={this.state.disabled ? 'disabled' : ''}
                 />
                 <div className="form-check mb-4">
                   <input

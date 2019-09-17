@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import CommentFeed from "./CommentFeed";
-import CommentForm from "./CommentForm";
-import Spinner from "../common/Spinner";
-import PostItem from "../posts/PostItem";
-import { getPost } from "../../actions/postActions";
+import CommentFeed from './CommentFeed';
+import CommentForm from './CommentForm';
+import Spinner from '../common/Spinner';
+import PostItem from '../posts/PostItem';
+import { getPost } from '../../actions/postActions';
 
 class Post extends Component {
   componentDidMount() {

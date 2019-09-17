@@ -1,33 +1,33 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { Link, withRouter } from "react-router-dom";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Link, withRouter } from 'react-router-dom';
 
-import TextFieldGroup from "../common/TextFieldGroup";
-import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
-import SelectListGroup from "../common/SelectListGroup";
-import InputGroup from "../common/InputGroup";
-import { createProfile, getCurrentProfile } from "../../actions/profileActions";
-import isEmpty from "../../validation/is-empty";
+import TextFieldGroup from '../common/TextFieldGroup';
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import SelectListGroup from '../common/SelectListGroup';
+import InputGroup from '../common/InputGroup';
+import { createProfile, getCurrentProfile } from '../../actions/profileActions';
+import isEmpty from '../../validation/is-empty';
 
 class CreateProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       displaySocialInputs: false,
-      handle: "",
-      company: "",
-      website: "",
-      location: "",
-      status: "",
-      skills: "",
-      githubusername: "",
-      bio: "",
-      twitter: "",
-      facebook: "",
-      linkedin: "",
-      youtube: "",
-      instagram: "",
+      handle: '',
+      company: '',
+      website: '',
+      location: '',
+      status: '',
+      skills: '',
+      githubusername: '',
+      bio: '',
+      twitter: '',
+      facebook: '',
+      linkedin: '',
+      youtube: '',
+      instagram: '',
       errors: {}
     };
 
@@ -48,32 +48,32 @@ class CreateProfile extends Component {
       const profile = nextProps.profile.profile;
 
       // bring skills array back to CSV
-      const skillsCSV = profile.skills.join(",");
+      const skillsCSV = profile.skills.join(',');
 
       // if profile field doesnt exist = make empty string
-      profile.company = !isEmpty(profile.company) ? profile.company : "";
-      profile.website = !isEmpty(profile.website) ? profile.website : "";
-      profile.location = !isEmpty(profile.location) ? profile.location : "";
+      profile.company = !isEmpty(profile.company) ? profile.company : '';
+      profile.website = !isEmpty(profile.website) ? profile.website : '';
+      profile.location = !isEmpty(profile.location) ? profile.location : '';
       profile.githubusername = !isEmpty(profile.githubusername)
         ? profile.githubusername
-        : "";
-      profile.bio = !isEmpty(profile.bio) ? profile.bio : "";
+        : '';
+      profile.bio = !isEmpty(profile.bio) ? profile.bio : '';
       profile.social = !isEmpty(profile.social) ? profile.social : {};
       profile.twitter = !isEmpty(profile.social.twitter)
         ? profile.social.twitter
-        : "";
+        : '';
       profile.facebook = !isEmpty(profile.social.facebook)
         ? profile.social.facebook
-        : "";
+        : '';
       profile.linkedin = !isEmpty(profile.social.linkedin)
         ? profile.social.linkedin
-        : "";
+        : '';
       profile.youtube = !isEmpty(profile.social.youtube)
         ? profile.social.youtube
-        : "";
+        : '';
       profile.instagram = !isEmpty(profile.social.instagram)
         ? profile.social.instagram
-        : "";
+        : '';
 
       // set component fields state
       this.setState({
@@ -178,15 +178,15 @@ class CreateProfile extends Component {
 
     // select options for status
     const options = [
-      { label: "* Select Professional Status", value: 0 },
-      { label: "Developer", value: "Developer" },
-      { label: "Junior Developer", value: "Junior Developer" },
-      { label: "Senior Developer", value: "Senior Developer" },
-      { label: "Manager", value: "Manager" },
-      { label: "Student or Learning", value: "Student or Learning" },
-      { label: "Instructor or Teacher", value: "Instructor or Teacher" },
-      { label: "Intern", value: "Intern" },
-      { label: "Other", value: "Other" }
+      { label: '* Select Professional Status', value: 0 },
+      { label: 'Developer', value: 'Developer' },
+      { label: 'Junior Developer', value: 'Junior Developer' },
+      { label: 'Senior Developer', value: 'Senior Developer' },
+      { label: 'Manager', value: 'Manager' },
+      { label: 'Student or Learning', value: 'Student or Learning' },
+      { label: 'Instructor or Teacher', value: 'Instructor or Teacher' },
+      { label: 'Intern', value: 'Intern' },
+      { label: 'Other', value: 'Other' }
     ];
 
     return (

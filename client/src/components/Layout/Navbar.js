@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import { logoutUser } from "../../actions/authActions";
-import { clearCurrentProfile } from "../../actions/profileActions";
+import { logoutUser } from '../../actions/authActions';
+import { clearCurrentProfile } from '../../actions/profileActions';
 
 class Navbar extends Component {
   onLogoutClick(e) {
@@ -36,7 +36,7 @@ class Navbar extends Component {
           >
             <img
               className="rounded-circle"
-              style={{ width: "25px", marginRight: "5px" }}
+              style={{ width: '25px', marginRight: '5px' }}
               src={user.avatar}
               alt={user.name}
               title="Have a Gravatar connected to your email to display an image"
@@ -81,7 +81,7 @@ class Navbar extends Component {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/profiles">
-                  {" "}
+                  {' '}
                   Developers
                 </Link>
               </li>

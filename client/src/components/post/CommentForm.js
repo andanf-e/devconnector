@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
-import { addComment } from "../../actions/postActions";
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import { addComment } from '../../actions/postActions';
 
 class CommentForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: "",
+      text: '',
       errors: {}
     };
 
@@ -36,7 +36,7 @@ class CommentForm extends Component {
     };
 
     this.props.addComment(postId, newComment);
-    this.setState({ text: "" });
+    this.setState({ text: '' });
   }
 
   onChange(e) {

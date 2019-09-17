@@ -1,33 +1,33 @@
-import React, { Component } from "react";
-import jwt_decode from "jwt-decode";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Provider } from "react-redux";
+import React, { Component } from 'react';
+import jwt_decode from 'jwt-decode';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import PrivateRoute from "./components/common/PrivateRoute";
+import PrivateRoute from './components/common/PrivateRoute';
 
-import { setCurrentUser, logoutUser } from "./actions/authActions";
-import { clearCurrentProfile } from "./actions/profileActions";
-import setAuthToken from "./utils/setAuthToken";
+import { setCurrentUser, logoutUser } from './actions/authActions';
+import { clearCurrentProfile } from './actions/profileActions';
+import setAuthToken from './utils/setAuthToken';
 
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import Landing from "./components/layout/Landing";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
-import Dashboard from "./components/dashboard/Dashboard";
-import CreateProfile from "./components/create-profile/CreateProfile";
-import EditProfile from "./components/edit-profile/EditProfile";
-import AddExperience from "./components/add-credentials/AddExperience";
-import AddEducation from "./components/add-credentials/AddEducation";
-import Profiles from "./components/profiles/Profiles";
-import Profile from "./components/profile/Profile";
-import Posts from "./components/posts/Posts";
-import Post from "./components/post/Post";
-import NotFound from "./components/not-found/NotFound";
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+import Landing from './components/layout/Landing';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/create-profile/CreateProfile';
+import EditProfile from './components/edit-profile/EditProfile';
+import AddExperience from './components/add-credentials/AddExperience';
+import AddEducation from './components/add-credentials/AddEducation';
+import Profiles from './components/profiles/Profiles';
+import Profile from './components/profile/Profile';
+import Posts from './components/posts/Posts';
+import Post from './components/post/Post';
+import NotFound from './components/not-found/NotFound';
 
-import store from "./store";
+import store from './store';
 
-import "./App.css";
+import './App.css';
 
 if (localStorage.jwtToken) {
   // set auth token header
@@ -43,7 +43,7 @@ if (localStorage.jwtToken) {
 
     store.dispatch(clearCurrentProfile());
 
-    window.location.href = "/login";
+    window.location.href = '/login';
   }
 }
 
