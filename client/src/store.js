@@ -6,6 +6,7 @@ import rootReducer from './reducers';
 
 const initialState = {};
 const middleware = [thunk];
+
 // new
 // const composeEnhancers =
 //   process.env.NODE_ENV === 'development'
@@ -23,13 +24,13 @@ const middleware = [thunk];
 const store = createStore(
   rootReducer,
   initialState,
-  compose(
-    applyMiddleware(...middleware),
-    process.env.NODE_ENV === 'development'
-      ? window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  process.env.NODE_ENV === 'development'
+    ? compose(
+        applyMiddleware(...middleware),
+        window.__REDUX_DEVTOOLS_EXTENSION__ &&
           window.__REDUX_DEVTOOLS_EXTENSION__()
-      : null
-  )
+      )
+    : compose(applyMiddleware(...middleware))
 );
 
 export default store;
